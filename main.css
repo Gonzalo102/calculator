@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: rgba(20, 20, 20, 0.459);
+    width: 400px;
+    height: 90%;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.display{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-size: 2rem;
+    background-color: whitesmoke;
+}
+
+.wrapper-delete-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+
+.delete-buttons{
+    border: 1px solid black;
+    padding: 20px 50px;
+    border-radius: 5px;
+    width: 93px; 
+}
+
+#clear{
+    background-color: rgb(131, 229, 247);
+    cursor: pointer;
+}
+
+:hover#clear{
+    background-color: rgb(116, 154, 204);
+}
+
+#delete{
+    background-color: rgba(247, 115, 115, 0.966);
+    cursor: pointer;
+}
+
+:hover#delete{
+    background-color: rgb(197, 78, 78);
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+
+}
+
+.button{
+    padding:10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    height: 40px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all .07s ease;
+}
+
+.press{
+    transform: scale(1.1);
+    border-color: #050505;
+    box-shadow: 0 0 1rem #61605f;
+    background-color: gray;
+}
+
+:hover.button{
+    border-color: #050505;
+    box-shadow: 0 0 1rem #61605f;
+    background-color: lightgray;
+}
