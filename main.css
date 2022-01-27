@@ -1,15 +1,18 @@
+
 body{
-    margin: 0;
+    margin: 150px 0;
     padding: 0;
 }
+
 .container{
-    background-color: rgba(20, 20, 20, 0.459);
+    background-color: rgb(2 115 255 / 37%);
     width: 400px;
     height: 90%;
-    padding: 20px;
+    padding: 40px;
     margin-top: 20px;
     border-radius: 10px;
     border: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .display{
@@ -29,8 +32,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-
 }
 
 .delete-buttons{
@@ -41,21 +42,22 @@ body{
 }
 
 #clear{
-    background-color: rgb(131, 229, 247);
+    background-color: rgb(237 252 255 / 43%);
     cursor: pointer;
 }
 
 :hover#clear{
-    background-color: rgb(116, 154, 204);
+    background-color: rgba(237, 252, 255, 0.752);
+
 }
 
 #delete{
-    background-color: rgba(247, 115, 115, 0.966);
+    background-color:  rgb(253 178 178 / 80%);
     cursor: pointer;
 }
 
-:hover#delete{
-    background-color: rgb(197, 78, 78);
+:hover#delete {
+    background-color:  rgba(253, 178, 178, 0.992);
 }
 
 .wrapper{
@@ -81,12 +83,12 @@ body{
 .press{
     transform: scale(1.1);
     border-color: #050505;
-    box-shadow: 0 0 1rem #61605f;
+    box-shadow: 0 0 10px #205a5a;
     background-color: gray;
 }
 
 :hover.button{
     border-color: #050505;
-    box-shadow: 0 0 1rem #61605f;
+    box-shadow: 0 0 10px #205a5a;
     background-color: lightgray;
 }

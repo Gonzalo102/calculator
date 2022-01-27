@@ -8,14 +8,13 @@ const clearButton = document.querySelector('.clear');
 const deleteButton = document.querySelector('.delete');
 const keys = document.querySelectorAll('.button');
 
-
 let firstOperand = "";
 let secondOperand = "";
 let currentOperation = null;
 let shouldResetScreen = false;
 let alreadyDisplay = false;
 
-
+//event Listeners
 numberButtons.forEach(button => button.addEventListener('click', () => appendNumber(button.textContent)));
 operatorsButtons.forEach(button => button.addEventListener('click', () => setOperation(button.textContent)));
 equals.addEventListener('click', evaluate);
@@ -96,14 +95,15 @@ function setOperation(operator) {
   }
 
 function evaluate() {
+
     if (currentOperation === null || shouldResetScreen) return;
-    if (currentOperation === "÷" && display.textContent === "0") {
-      alert("You can't divide by 0!");
-      //clear();
-      return;
+    if (currentOperation === "%" && display.textContent === "0") {
+        alert("You can't divide by 0!");
+        clear();
+        return;
     }
+
     secondOperand = display.textContent;
-    //console.log(secondOperand)
     display.textContent = roundResult(operate(currentOperation, firstOperand, secondOperand));
     currentOperation = null;
   }
@@ -128,7 +128,6 @@ function operate(operator, num1, num2) {
             break;
         case '%':
             if (num2 === 0) {
-                alert("You can not divide by cero!");
                 clear();
                 resetScreen();
                 return;
@@ -153,40 +152,4 @@ const multiply = function(num1, num2) {
 
 const divide = function(num1, num2) {
     return num1 / num2;
- };
-
-
-
-
-
-
-
-/* 
- function displayValue(e) {
- 
-    if (this.textContent !== undefined ) {
-        number1.push(this.textContent);
-        console.log(number1);
-    }
-    const value = number1.reduce((acc, item) => {
-        acc = acc + item;
-        return acc;
-    },"");
-    
-    display.textContent = parseInt(value);
-    console.log('value ' + value);
-    return parseInt(value);
-} */
-
-/* 
-function saveTheOperator(e) {
-    ;
-        console.log(this.textContent);
-        let operator = this.textContent;
-        let value1 = displayValue();
-        console.log('value1: ' + value1);
-        display.textContent = this.textContent;
-        return operator;
-    }
-    
-     */
+};
